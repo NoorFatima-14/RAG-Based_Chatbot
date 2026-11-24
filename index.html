@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>DocChat - Ask Your PDF</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="layout">
+    <aside class="sidebar">
+      <h1>📄 DocChat</h1>
+      <p class="muted">Upload any PDF and ask questions in plain English.</p>
+
+      <label class="upload-box" for="file-input">
+        <span id="upload-label">Choose a PDF</span>
+        <input id="file-input" type="file" accept="application/pdf,.pdf" hidden />
+      </label>
+      <button id="upload-btn" disabled>Process PDF</button>
+
+      <p id="status" class="status" role="status"></p>
+      <p id="banner" class="banner" hidden></p>
+    </aside>
+
+    <main class="chat">
+      <div id="messages" class="messages" aria-live="polite">
+        <div class="empty" id="empty">Upload a PDF on the left, then ask a question here.</div>
+      </div>
+
+      <form id="ask-form" class="ask-form">
+        <input id="question" type="text" maxlength="1000"
+               placeholder="Ask a question about your document..." autocomplete="off" disabled />
+        <button id="send-btn" type="submit" disabled>Send</button>
+      </form>
+    </main>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
