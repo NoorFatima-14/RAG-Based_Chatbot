@@ -4,7 +4,7 @@ A document-based conversational AI application that enables users to interact wi
 
 ## Application Preview
 
-![DocChat Application](DocChAT.JPG)
+![DocChat Application](DocChat.jpg)
 
 ## Features
 
